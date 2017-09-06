@@ -32,4 +32,24 @@ Public Class frmMain
         lblTotalSales.Text = Format(lblTotalSales.Text, "currency")
 
     End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+
+    End Sub
+
+    Private Sub txtDate_TextChanged(sender As Object, e As EventArgs) Handles txtDate.TextChanged
+
+    End Sub
+
+    Private Sub txtDonuts_TextChanged(sender As Object, e As EventArgs) Handles txtDonuts.TextChanged
+
+    End Sub
+
+    Private Sub txtMuffins_TextChanged(sender As Object, e As EventArgs) Handles txtMuffins.TextChanged
+
+    End Sub
+
+    Private Sub lblTotalItems_Click(sender As Object, e As EventArgs) Handles lblTotalItems.Click
+
+    End Sub
 End Class

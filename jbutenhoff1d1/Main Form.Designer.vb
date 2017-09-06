@@ -45,6 +45,7 @@ Partial Class frmMain
         '
         Me.lblTotalSales.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblTotalSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTotalSales.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lblTotalSales.Location = New System.Drawing.Point(132, 231)
         Me.lblTotalSales.Name = "lblTotalSales"
         Me.lblTotalSales.Size = New System.Drawing.Size(47, 27)

@@ -55,20 +55,18 @@ Partial Class frmMain
         '
         'txtHours
         '
-        Me.txtHours.Location = New System.Drawing.Point(271, 131)
+        Me.txtHours.Location = New System.Drawing.Point(132, 131)
         Me.txtHours.Name = "txtHours"
         Me.txtHours.Size = New System.Drawing.Size(72, 22)
         Me.txtHours.TabIndex = 2
-        Me.txtHours.Text = "0.00"
         Me.txtHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtRate
         '
-        Me.txtRate.Location = New System.Drawing.Point(118, 131)
+        Me.txtRate.Location = New System.Drawing.Point(277, 131)
         Me.txtRate.Name = "txtRate"
         Me.txtRate.Size = New System.Drawing.Size(72, 22)
         Me.txtRate.TabIndex = 1
-        Me.txtRate.Text = "0.00"
         Me.txtRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblName

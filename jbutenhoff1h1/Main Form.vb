@@ -23,6 +23,23 @@ Public Class frmMain
 
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
         ' Calculate Net Pay
+        'txtName.Text = "MsgA"
+        'Label6.Text = "MsgB"
+        'lblNetC.Text = Convert.ToString(Convert.ToInt(txtHours.Text) + 10)
+        'lblNetC.Text = txtHours.Text
+        'lblNetC.Text = Convert.ToString(Convert.ToInt32(txtHours.Text) + PictureBox1.Top)
+        'PictureBox1.Top = 100
+        'PictureBox1.Top = PictureBox1.Top + Convert.ToInt32(txtHours.Text)
+        'txtName.Text = "MsgC" + " MsgD"
+        'txtName.Text = "MsgC"& "MsgD" 
+        'txtName.Text = "Gross pay: _
+        '   + Convert.ToString(Convert.ToInt32(txtHours.Text) * Convert.ToDouble(txtPayRate.Text))
+        'txtName.Text = "Gross pay: " + Convert.ToString(Convert.ToDecimal(txtHours.Text) * Convert.ToDecimal(txtRate.Text))
+        'lblNetC.Text = Format(1000, "N2")
+        'lblNetC.Text = 1000.ToString("N2")
+        'lblNetC.Text = (1000).ToString("N2")
+        'lblNetC.Text = (Convert.ToDouble(txtRate.Text) * 1000).ToString("N2")
+        'txtName.Text = "MsgD: " + (Convert.ToDouble(txtRate.Text) * 1000).ToString("N2")
 
         lblGrossC.Text = Format(Val(txtRate.Text) * Val(txtHours.Text), "fixed")
         lblFWTC.Text = Format(Val(lblGrossC.Text) * 0.2, "fixed")

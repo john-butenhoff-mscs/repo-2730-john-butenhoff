@@ -69,7 +69,7 @@ Partial Class frmMain
         '
         Me.txtTest1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTest1.Location = New System.Drawing.Point(139, 58)
-        Me.txtTest1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTest1.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTest1.Name = "txtTest1"
         Me.txtTest1.Size = New System.Drawing.Size(83, 31)
         Me.txtTest1.TabIndex = 0
@@ -79,7 +79,7 @@ Partial Class frmMain
         '
         Me.txtTest2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTest2.Location = New System.Drawing.Point(139, 140)
-        Me.txtTest2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTest2.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTest2.Name = "txtTest2"
         Me.txtTest2.Size = New System.Drawing.Size(83, 31)
         Me.txtTest2.TabIndex = 1
@@ -89,7 +89,7 @@ Partial Class frmMain
         '
         Me.txtTest3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTest3.Location = New System.Drawing.Point(139, 229)
-        Me.txtTest3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTest3.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTest3.Name = "txtTest3"
         Me.txtTest3.Size = New System.Drawing.Size(83, 31)
         Me.txtTest3.TabIndex = 2
@@ -98,7 +98,7 @@ Partial Class frmMain
         'btnCalc
         '
         Me.btnCalc.Location = New System.Drawing.Point(252, 47)
-        Me.btnCalc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCalc.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(104, 42)
         Me.btnCalc.TabIndex = 4
@@ -108,7 +108,7 @@ Partial Class frmMain
         'btnClear
         '
         Me.btnClear.Location = New System.Drawing.Point(252, 129)
-        Me.btnClear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(4)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(104, 42)
         Me.btnClear.TabIndex = 5
@@ -118,7 +118,7 @@ Partial Class frmMain
         'btnExit
         '
         Me.btnExit.Location = New System.Drawing.Point(252, 222)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(104, 38)
         Me.btnExit.TabIndex = 6
@@ -139,7 +139,7 @@ Partial Class frmMain
         '
         Me.txtAvgTest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAvgTest.Location = New System.Drawing.Point(202, 305)
-        Me.txtAvgTest.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtAvgTest.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAvgTest.Name = "txtAvgTest"
         Me.txtAvgTest.Size = New System.Drawing.Size(121, 31)
         Me.txtAvgTest.TabIndex = 3

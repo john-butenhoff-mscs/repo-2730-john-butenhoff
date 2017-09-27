@@ -22,6 +22,8 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.lblTotalSales = New System.Windows.Forms.Label()
         Me.lblTotalItems = New System.Windows.Forms.Label()
         Me.txtDate = New System.Windows.Forms.TextBox()
@@ -37,6 +39,8 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtMuffins = New System.Windows.Forms.TextBox()
+        Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
+        Me.lblMsg = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,33 +48,31 @@ Partial Class frmMain
         '
         Me.lblTotalSales.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.lblTotalSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblTotalSales.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblTotalSales.Location = New System.Drawing.Point(132, 231)
+        Me.lblTotalSales.Location = New System.Drawing.Point(124, 234)
         Me.lblTotalSales.Name = "lblTotalSales"
-        Me.lblTotalSales.Size = New System.Drawing.Size(47, 27)
-        Me.lblTotalSales.TabIndex = 13
-        Me.lblTotalSales.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblTotalSales.Size = New System.Drawing.Size(94, 27)
+        Me.lblTotalSales.TabIndex = 14
         Me.lblTotalSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblTotalItems
         '
         Me.lblTotalItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblTotalItems.Location = New System.Drawing.Point(132, 192)
+        Me.lblTotalItems.Location = New System.Drawing.Point(124, 191)
         Me.lblTotalItems.Name = "lblTotalItems"
         Me.lblTotalItems.Size = New System.Drawing.Size(47, 27)
-        Me.lblTotalItems.TabIndex = 11
+        Me.lblTotalItems.TabIndex = 13
         Me.lblTotalItems.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtDate
         '
-        Me.txtDate.Location = New System.Drawing.Point(156, 67)
+        Me.txtDate.Location = New System.Drawing.Point(170, 71)
         Me.txtDate.Name = "txtDate"
         Me.txtDate.Size = New System.Drawing.Size(111, 32)
         Me.txtDate.TabIndex = 1
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(228, 216)
+        Me.btnExit.Location = New System.Drawing.Point(242, 220)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(114, 31)
         Me.btnExit.TabIndex = 9
@@ -79,7 +81,7 @@ Partial Class frmMain
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(228, 166)
+        Me.btnClear.Location = New System.Drawing.Point(242, 170)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(114, 31)
         Me.btnClear.TabIndex = 8
@@ -88,7 +90,7 @@ Partial Class frmMain
         '
         'btnCalc
         '
-        Me.btnCalc.Location = New System.Drawing.Point(228, 114)
+        Me.btnCalc.Location = New System.Drawing.Point(242, 118)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(114, 31)
         Me.btnCalc.TabIndex = 6
@@ -98,16 +100,16 @@ Partial Class frmMain
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(24, 190)
+        Me.Label5.Location = New System.Drawing.Point(9, 193)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(106, 25)
-        Me.Label5.TabIndex = 10
+        Me.Label5.TabIndex = 11
         Me.Label5.Text = "Total items:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(24, 153)
+        Me.Label4.Location = New System.Drawing.Point(9, 155)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(80, 25)
         Me.Label4.TabIndex = 4
@@ -116,7 +118,7 @@ Partial Class frmMain
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(24, 114)
+        Me.Label3.Location = New System.Drawing.Point(9, 118)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 25)
         Me.Label3.TabIndex = 2
@@ -125,33 +127,33 @@ Partial Class frmMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(106, 70)
+        Me.Label2.Location = New System.Drawing.Point(120, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 25)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Date:"
+        Me.Label2.Text = "Da&te:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(103, 18)
+        Me.Label1.Location = New System.Drawing.Point(117, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(215, 46)
-        Me.Label1.TabIndex = 14
+        Me.Label1.TabIndex = 10
         Me.Label1.Text = "Sales Receipt"
         '
         'txtDonuts
         '
-        Me.txtDonuts.Location = New System.Drawing.Point(132, 111)
+        Me.txtDonuts.Location = New System.Drawing.Point(124, 115)
         Me.txtDonuts.Name = "txtDonuts"
         Me.txtDonuts.Size = New System.Drawing.Size(47, 32)
         Me.txtDonuts.TabIndex = 3
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Bakery_Project.My.Resources.Resources.Chef
-        Me.PictureBox1.Location = New System.Drawing.Point(22, 12)
+        Me.PictureBox1.Image = Global.jbutenhoff2a1.My.Resources.Resources.Chef
+        Me.PictureBox1.Location = New System.Drawing.Point(14, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(71, 68)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -161,7 +163,7 @@ Partial Class frmMain
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(24, 230)
+        Me.Label6.Location = New System.Drawing.Point(9, 236)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(102, 25)
         Me.Label6.TabIndex = 12
@@ -169,16 +171,35 @@ Partial Class frmMain
         '
         'txtMuffins
         '
-        Me.txtMuffins.Location = New System.Drawing.Point(132, 153)
+        Me.txtMuffins.Location = New System.Drawing.Point(124, 152)
         Me.txtMuffins.Name = "txtMuffins"
         Me.txtMuffins.Size = New System.Drawing.Size(47, 32)
         Me.txtMuffins.TabIndex = 5
         '
+        'PrintForm1
+        '
+        Me.PrintForm1.DocumentName = "document"
+        Me.PrintForm1.Form = Me
+        Me.PrintForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview
+        Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
+        Me.PrintForm1.PrintFileName = Nothing
+        '
+        'lblMsg
+        '
+        Me.lblMsg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblMsg.Location = New System.Drawing.Point(42, 280)
+        Me.lblMsg.Name = "lblMsg"
+        Me.lblMsg.Size = New System.Drawing.Size(314, 49)
+        Me.lblMsg.TabIndex = 15
+        Me.lblMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmMain
         '
+        Me.AcceptButton = Me.btnCalc
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(375, 359)
+        Me.ClientSize = New System.Drawing.Size(366, 346)
+        Me.Controls.Add(Me.lblMsg)
         Me.Controls.Add(Me.txtMuffins)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.PictureBox1)
@@ -194,11 +215,11 @@ Partial Class frmMain
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "3"
+        Me.Text = "Meyer's Purple Bakery"
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
         Me.PerformLayout
@@ -220,4 +241,6 @@ End Sub
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtMuffins As TextBox
+    Friend WithEvents PrintForm1 As PowerPacks.Printing.PrintForm
+    Friend WithEvents lblMsg As Label
 End Class

@@ -4,6 +4,8 @@
 ' Programmer:       John Butenhoff on 8/31/2017
 
 Option Strict On
+Option Explicit On
+Option Infer Off
 
 Public Class frmMain
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
@@ -32,10 +34,6 @@ Public Class frmMain
         ' Text = Val(txtDonuts.Text + txtMuffins.Text)
         lblTotalItems.Text = Format(Val(txtDonuts.Text) + Val(txtMuffins.Text), "0")
         lblTotalSales.Text = Format(Val(lblTotalItems.Text) * 0.5, "currency")
-    End Sub
-
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-
     End Sub
 
     Private Sub txtDate_TextChanged(sender As Object, e As EventArgs) Handles txtDate.TextChanged

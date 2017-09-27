@@ -2,7 +2,7 @@
 ' Purpose:      Calculates Average Test Score
 ' Programmer:   John Butenhoff on 9/11/2017
 
-Option Strict Off
+Option Strict On
 
 Public Class frmMain
     Private Sub lblTest3_Click(sender As Object, e As EventArgs) Handles lblTest3.Click, lblAvgTest.Click
@@ -28,6 +28,10 @@ Public Class frmMain
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
         txtAvgTest.Text = Str((Val(txtTest1.Text) + Val(txtTest2.Text) + Val(txtTest3.Text)) / 3)
         txtAvgTest.Text = Format(txtAvgTest.Text, "fixed")
+
+    End Sub
+
+    Private Sub txtTest1_TextChanged(sender As Object, e As EventArgs) Handles txtTest1.TextChanged
 
     End Sub
 End Class

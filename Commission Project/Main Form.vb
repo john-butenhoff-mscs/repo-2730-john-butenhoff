@@ -1,5 +1,4 @@
 ﻿' Name:         Commission Project
-' Name:         Commission Project
 ' Purpose:      Displays a salesperson's commission
 ' Programmer:   John Butenhoff on 9/26/2017
 

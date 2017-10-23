@@ -69,7 +69,7 @@ Public Class frmMain
         Decimal.TryParse(lblCommission.Text, decCommission)
         strID = txtID.Text.ToUpper
 
-        If strID = "A1" OrElse strID = "B2" OrElse strID = "C3" AndAlso decSales >= 25000 Then
+        If (strID = "A1") OrElse (strID = "B2") OrElse (strID = "C3") AndAlso (decSales >= 25000) Then
             decCommission = decSales * 0.15
         Else
             decCommission = decSales * 0.12
@@ -87,10 +87,12 @@ Public Class frmMain
         Decimal.TryParse(lblCommission.Text, decCommission)
         strID = txtID.Text.ToUpper
 
-        If strID <> "A1" OrElse strID = "B2" OrElse strID = "C3" AndAlso decSales < 25000 Then
+        If (strID <> "A1") And (strID <> "B2") And (strID <> "C3") Or (decSales < 25000) Then
             decCommission = decSales * 0.12
         Else
-            decCommission = decSales * 0.15
+            If (strID = "A1") And (strID = "B2") And (strID = "C3") AndAlso (decSales >= 25000) Then
+                decCommission = decSales * 0.15
+            End If
         End If
 
         lblCommission.Text = decCommission.ToString("c2")

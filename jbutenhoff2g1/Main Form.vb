@@ -1,6 +1,6 @@
 ﻿' Name:         Jetters Project
 ' Purpose:      Display the discount and total due
-' Programmer:   <your name> on <current date>
+' Programmer:   John Butenhoff on 10/23/2017
 
 Option Explicit On
 Option Strict On

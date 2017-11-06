@@ -29,16 +29,34 @@ Public Class Form1
 
     Private Sub DisplayColor(ByVal itemNum As String)
         lstColors.Items.Add(itemNum)
+        'Dim intNumChars As Integer
 
-        Dim intNumChars As Integer
+        'intNumChars = itemNum.Length
+        If itemNum.Length = 7 Then
+            'lstColors.Items.Add(itemNum.ToUpper)
 
-        'intNumChars = txtItem1.Text.Length, AndAlso intNumChars = txtItem2.Text.length, AndAlso intNumChars = txtItem3.Text, AndAlso intNumChars = txtItem4.Text.Length, AndAlso intNumChars = txtItem5.Text.Length
-        intNumChars = itemNum.Length
-        If intNumChars = 7 Then
+            Select Case itemNum.Substring(0, 3)
+                Case "b"
+                    lstColors.Text = "Blue"
+                Case "w"
+                    lstColors.Text = "White"
+                Case "G"
+                    lstColors.Text = "Green"
+                Case "r"
+                    lstColors.Text = "Red"
+                Case Else
+                    MessageBox.Show("Invalid input", "Character Format Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
 
-
+            End Select
 
         End If
+
+
+
+
+
+
+
     End Sub
 
     Private Sub txtName_Enter(sender As Object, e As EventArgs) Handles txtName.Enter

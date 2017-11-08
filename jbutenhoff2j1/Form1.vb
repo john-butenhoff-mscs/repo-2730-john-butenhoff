@@ -28,34 +28,23 @@ Public Class Form1
     End Sub
 
     Private Sub DisplayColor(ByVal itemNum As String)
-        lstColors.Items.Add(itemNum)
+        'lstColors.Items.Add(itemNum)
         'Dim intNumChars As Integer
 
-        'intNumChars = itemNum.Length
         If itemNum.Length = 7 Then
-            'lstColors.Items.Add(itemNum.ToUpper)
-
-            Select Case itemNum.Substring(0, 3)
-                Case "b"
-                    lstColors.Text = "Blue"
-                Case "w"
-                    lstColors.Text = "White"
+            Select Case itemNum.ToUpper.Substring(3, 1)
+                Case "B"
+                    lstColors.Items.Add("Blue")
+                Case "W"
+                    lstColors.Items.Add("White")
                 Case "G"
-                    lstColors.Text = "Green"
-                Case "r"
-                    lstColors.Text = "Red"
+                    lstColors.Items.Add("Green")
+                Case "R"
+                    lstColors.Items.Add("Red")
                 Case Else
                     MessageBox.Show("Invalid input", "Character Format Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-
             End Select
-
         End If
-
-
-
-
-
-
 
     End Sub
 
@@ -77,7 +66,25 @@ Public Class Form1
     End Sub
 
     Private Sub DisplayDelivery(ByVal partNum As String)
-        lstDelivery.Items.Add("Mail - Standard")
+        'lstDelivery.Items.Add("Mail - Standard")
+        If partNum.Length = 3 OrElse partNum.Length = 4 Then
+            Select Case partNum.ToUpper.Substring(2)
+                Case "MS"
+                    lstDelivery.Items.Add("Mail-Standard")
+                Case "MP"
+                    lstDelivery.Items.Add("Mail-Priority")
+                Case "FS"
+                    lstDelivery.Items.Add("FedEx-Standard")
+                Case "FO"
+                    lstDelivery.Items.Add("FedEx-Overnight")
+                Case "U"
+                    lstDelivery.Items.Add("UPS")
+                Case Else
+                    MessageBox.Show("Invalid input", "Character Format Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+
+            End Select
+        End If
+
     End Sub
 
     Private Sub PartNum_TextChanged(sender As Object, e As EventArgs) _
@@ -94,7 +101,16 @@ Public Class Form1
     '6) Repeat steps 2 - 4 to remove/insert first letter of last name
 
     Private Sub btnProper_Click(sender As Object, e As EventArgs) Handles btnProper.Click
+        Dim strName As String = txtName.Text.ToLower
+        Dim strFirstChar As String
+
+        strName.ToUpper.Substring(0, 1)
+        strFirstChar = strName.Remove(0, 1)
+        strName.Insert(0, strFirstChar)
+        strName.IndexOf(" ", 1)
+
 
     End Sub
+
 
 End Class

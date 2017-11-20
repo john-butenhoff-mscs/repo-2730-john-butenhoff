@@ -107,6 +107,7 @@ Public Class Form1
     End Sub
 
     Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnDisplay.Click
+        'On Error Resume Next
         str1 = String.Empty
         str2 = String.Empty
         str3 = String.Empty
@@ -150,8 +151,14 @@ Public Class Form1
         lblString1.Text = str1
         lblString2.Text = str2
 
-        Byte.TryParse(txtInput1.Text, byte1)
+        'using convert method rather than TryParse
+        Dim inp As Decimal = 0.0D
+        inp = Convert.ToDecimal(txtInput1.Text)
+
+        'Byte.TryParse(txtInput1.Text, byte1)
         Byte.TryParse(txtInput2.Text, byte2)
+        byte1 = Convert.ToByte(inp)
+
         lblByte1.Text = byte1.ToString()
         lblByte2.Text = byte2.ToString()
 

@@ -21,7 +21,7 @@ Public Class Form1
 
     Private Sub btnSubtract_Click(sender As Object, e As EventArgs) Handles btnSubtract.Click
         btnDisplay_Click(Nothing, Nothing)
-        On Error Resume Next
+        'On Error Resume Next
         ' str3 = str1 - str2
         ' lblString3.Text = str1 - str2
         byte3 = byte1 - byte2
@@ -158,7 +158,6 @@ Public Class Form1
         'Byte.TryParse(txtInput1.Text, byte1)
         Byte.TryParse(txtInput2.Text, byte2)
         byte1 = Convert.ToByte(inp)
-
         lblByte1.Text = byte1.ToString()
         lblByte2.Text = byte2.ToString()
 

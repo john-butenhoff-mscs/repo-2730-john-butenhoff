@@ -22,7 +22,7 @@ Public Class frmMain
         'lstMultTable.Items.Add(strOutput)
 
         'do loop
-        Do While (count <= 10)
+        Do While (count <= 9)
             lstMultTable.Items.Add(number & " * " & count & " = " & product)
             count += 1
             product = number * count
@@ -42,7 +42,7 @@ Public Class frmMain
         product = number * count
         'Dim strOutput As String = "    " & number.ToString() & " * " & count.ToString() & " = " & product.ToString()
 
-        For count = 1 To 10 Step 1
+        For count = 1 To 9
             product = number * count
             lstMultTable.Items.Add(number & " * " & count & " = " & product)
         Next count
@@ -73,6 +73,113 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'load ListBox with test data:
+        '       repeat for each number 1 to 4
+        '           add the number to the ListBox
+        '       next index        
+
+        For i As Integer = 1 To 4
+            lstPrices.Items.Add(i.ToString("n2"))
+        Next i
+
+        ' calculate pretax total:
+        '       declare dblPreTaxTotal and initialzie to 0
+        '       repeat for each index 0 to lstPrices.Items.Count -1
+        '           set ListBox SelectedIndex to index
+        '           set strSelectedItem and to the ListBox SelectedItem
+        '           convert strSelectedPrice to Double and set dblSelectedPrice
+        '           add dblSelectedPrice to dblPreTaxTotal
+        '       next index
+        Dim dblPreTaxTotal As Double = 0
+        Dim strSelectedItem As String
+        Dim dblSelectedPrice As Double
+        Dim dblTaxRate As Double = 0.05
+        Dim dblTax As Double = 0.0
+        Dim dblTotal As Double = 0.0
+
+        lstPrices.SelectedIndex = 0
+
+        For i As Integer = 0 To lstPrices.Items.Count - 1
+            lstPrices.SelectedIndex = i
+            strSelectedItem = Convert.ToString(lstPrices.SelectedItem)
+            Double.TryParse(strSelectedItem, dblSelectedPrice)
+            dblPreTaxTotal += dblSelectedPrice
+        Next i
+
+        '       display dblPreTaxTotal
+        '       calculate and display dblTax
+        '       calculate and display dblTotal
+        '       deselect ListBox items
+        'dblPreTaxTotal = dblSelectedPrice
+
+        dblTax = dblTaxRate * dblPreTaxTotal
+        dblTotal = dblTax + dblPreTaxTotal
+        lblPreTaxTotal.Text = dblPreTaxTotal.ToString("n2")
+        lblTax.Text = dblTax.ToString("n2")
+        lblTotal.Text = dblTotal.ToString("N2")
+
+        lstPrices.SelectedIndex = -1
+
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        'get strPrice using InputBox
+        'convert strPrice to Double: dblPrice
+        'repeat as long as price is invalid: outside of range 1 to 9.99
+        '   get strPrice using InputBox
+        '   convert strPrice to double: dblPrice
+        'end repeat
+        'add dblPrice to Listbox
+        'Calculate and display totals       
+        Dim strPrice As String
+        Dim dblPrice As Double = 0.0
+        Const strPROMPT As String =
+            "Enter a number from 1.00 to 9.99"
+        strPrice = InputBox(strPROMPT, "", "0.00")
+        Double.TryParse(strPrice, dblPrice)
+
+        Do While dblPrice < 1 OrElse dblPrice > 10.0
+            strPrice = InputBox(strPROMPT, "", "0.00")
+            Double.TryParse(strPrice, dblPrice)
+        Loop
+
+        'strPrice = strPROMPT
+        'Double.TryParse(strPrice, dblPrice)
+
+        '    strPrice = Convert.ToString(dblPrice)
+        lstPrices.Items.Add(dblPrice)
+
+        Dim dblPreTaxTotal As Double = 0
+        Dim strSelectedItem As String
+        Dim dblSelectedPrice As Double
+        Dim dblTaxRate As Double = 0.05
+        Dim dblTax As Double = 0.0
+        Dim dblTotal As Double = 0.0
+
+        lstPrices.SelectedIndex = 0
+
+        For i As Integer = 0 To lstPrices.Items.Count - 1
+            lstPrices.SelectedIndex = i
+            strSelectedItem = Convert.ToString(lstPrices.SelectedItem)
+            Double.TryParse(strSelectedItem, dblSelectedPrice)
+            dblPreTaxTotal += dblSelectedPrice
+        Next i
+
+        dblTax = dblTaxRate * dblPreTaxTotal
+        dblTotal = dblTax + dblPreTaxTotal
+        lblPreTaxTotal.Text = dblPreTaxTotal.ToString("n2")
+        lblTax.Text = dblTax.ToString("n2")
+        lblTotal.Text = dblTotal.ToString("N2")
+
+        lstPrices.SelectedIndex = -1
+    End Sub
+
+    Private Sub lstPrices_KeyDown(sender As Object, e As KeyEventArgs) Handles lstPrices.KeyDown
+        'if an item is selected and the user pressed 'Del' or Back'
+        '   remove the ListBox item at the selected index
+        '   calculate and display totals
+        'end if
+
 
     End Sub
 End Class
